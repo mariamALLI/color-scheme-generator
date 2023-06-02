@@ -1,0 +1,127 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Simonetta';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Simonetta'), url('https://fonts.cdnfonts.com/s/29888/Simonetta-Italic.woff') format('woff');
+}
+
+body {
+    background-color: #BBD0FF;
+    padding: 0;
+    margin: 0;
+    font-family: 'Simonetta';
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 1.5rem 2rem;
+    margin: 0 auto;
+}
+
+#color_form {
+    display: grid;
+    grid-template-columns: 18% 50% 35%;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    margin-left: -28px;
+    }
+
+#color_form input {
+    border: none;
+    background-color: #BBD0FF;
+    width: 4rem;
+    height: 2.5rem;
+}    
+
+.mode_options {
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    color: #BBD0FF;
+    background: #000;
+    cursor: pointer;
+}  
+
+button {
+    font-family: inherit;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#color_btn {
+    color: #BBD0FF;
+    background-color: #000;
+}
+
+/* #color_display_container {
+  display: flex;
+  flex-direction: row;
+} */
+
+.color_box {
+    /* border: 3px solid #000; */
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+} 
+
+.color-box {
+    border: 3px solid #fff;
+    padding: 2rem 7.5rem;
+    width: 80%;
+}
+
+/* Typography */
+header h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.color-txt {
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 800px){
+    #color_display_container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        /* grid-column-gap: 16px; */
+        grid-row-gap: 0px;
+        /* background-color: #fff; */
+        padding: 1rem 2rem;
+        }
+
+        .color_box {
+            flex-direction: column;
+        }
+
+        .color-box {
+            padding: 1rem 4rem;
+            height: 100vh;
+            border-top: 29px solid #fff;
+            width: auto;
+        }
+
+        #color_form input {
+            width: 6rem;
+            height: 3.5rem;
+        }
+
+        #color-txt_one {
+            border: 1px solid #fff;
+        }
+        
+}
